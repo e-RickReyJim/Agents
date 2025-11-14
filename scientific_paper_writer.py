@@ -142,66 +142,76 @@ def get_gemini_llm():
         )
     
     llm = ChatGoogleGenerativeAI(
-        model="gemini-2.0-flash-exp",
+        model="gemini-2.0-flash",  # More stable, widely available model
         temperature=0.7,
         google_api_key=api_key,
-        max_retries=3,  # Retry on rate limit
-        request_timeout=120  # 2 minute timeout
+        max_retries=5,  # Increased retries for 503 errors
+        request_timeout=180  # 3 minute timeout
     )
     
     return llm
 
 
 def create_agents(llm, citation_format, use_rag=False):
-    """Create the three agents with format-specific instructions"""
+    """Create the agents with format-specific instructions"""
     
     format_info = CITATION_FORMATS[citation_format]
     
-    # Prepare tools - add RAG if enabled
-    researcher_tools = [web_search_tool]
-    if use_rag:
-        researcher_tools.append(rag_search_tool)
-    
-    # Enhanced researcher role when RAG is enabled
-    rag_addition = ""
-    if use_rag:
-        rag_addition = (
-            "\n\nYou also have access to a local PDF library. "
-            "Use BOTH web search AND local PDF search to find relevant sources. "
-            "Combine findings from online papers and local documents. "
-            "Clearly distinguish between web sources and local PDFs in your citations. "
-            "Local PDF citations should be marked as 'Local Document' or 'Personal Library'."
-        )
-    
-    researcher = Agent(
-        role="Scientific Researcher with Web Search" + (" and Local PDF Library" if use_rag else ""),
-        goal=f"Research {{{citation_format}}} topic using available tools to find real, recent academic papers and format references in {format_info['name']} style",
+    # Web Researcher Agent (always created)
+    web_researcher = Agent(
+        role="Web Research Specialist",
+        goal=f"Search the internet for real, recent academic papers on the topic and format references in {format_info['name']} style",
         backstory=(
-            f"You are an expert researcher with access to research tools. "
-            f"You find REAL, published academic papers and format citations in {format_info['name']} style.\n\n"
+            f"You are an expert at finding published academic papers online. "
+            f"You specialize in {format_info['name']} citation format.\n\n"
             f"Citation format: {format_info['name']}\n"
             f"In-text citation: {format_info['in_text']}\n"
             f"Reference format: {format_info['reference_format']}\n"
             f"Example: {format_info['example']}\n\n"
-            "You MUST use the web search tool to find real papers. "
+            "You MUST use the web search tool to find real papers from CrossRef. "
             "Extract actual author names, titles, journals, years, and DOIs. "
-            "Format each reference exactly according to the style guide."
-            f"{rag_addition}"
+            "Format each reference exactly according to the style guide. "
+            "Provide a comprehensive research summary with 5-7 properly cited sources."
         ),
-        tools=researcher_tools,
+        tools=[web_search_tool],
         allow_delegation=False,
         verbose=True,
         llm=llm
     )
     
+    # RAG Agent (only created if use_rag=True)
+    rag_agent = None
+    if use_rag:
+        rag_agent = Agent(
+            role="Local Document Specialist",
+            goal=f"Search local PDF library for relevant context and format findings in {format_info['name']} style",
+            backstory=(
+                f"You are an expert at analyzing local PDF documents in the personal library. "
+                f"You search through uploaded PDFs to find relevant context that can ground the research. "
+                f"You specialize in {format_info['name']} citation format.\n\n"
+                f"Citation format: {format_info['name']}\n"
+                f"In-text citation for local docs: {format_info['in_text']} with 'Local:' prefix\n"
+                f"Reference format: {format_info['reference_format']}\n\n"
+                "You use the RAG search tool to find relevant excerpts from local PDFs. "
+                "You provide context, key findings, and properly formatted citations for local documents. "
+                "You clearly mark sources as 'Local Document' or 'Personal Library'. "
+                "You provide filename, page numbers, and relevant excerpts."
+            ),
+            tools=[rag_search_tool],
+            allow_delegation=False,
+            verbose=True,
+            llm=llm
+        )
+    
     writer = Agent(
         role=f"Scientific Paper Writer ({format_info['name']} format)",
-        goal=f"Write a well-structured scientific paper on {{{citation_format}}} topic with proper {format_info['name']}-style citations",
+        goal=f"Write a well-structured scientific paper with proper {format_info['name']}-style citations using provided research",
         backstory=(
             f"You are an experienced academic writer specializing in {format_info['name']} format papers. "
             f"You structure papers with: Abstract, Introduction, Literature Review, Methodology, "
             f"Results/Discussion, Conclusion, and References.\n\n"
             f"You cite sources using {format_info['name']} in-text format: {format_info['in_text']}\n"
+            f"You synthesize research from web sources" + (" and local documents" if use_rag else "") + ". "
             f"You ensure all references are properly formatted in {format_info['name']} style. "
             f"You use formal academic language and maintain technical accuracy."
         ),
@@ -228,27 +238,20 @@ def create_agents(llm, citation_format, use_rag=False):
         llm=llm
     )
     
-    return researcher, writer, editor
+    # Return agents based on whether RAG is enabled
+    if use_rag:
+        return web_researcher, rag_agent, writer, editor
+    else:
+        return web_researcher, writer, editor
 
 
-def create_tasks(researcher, writer, editor, citation_format, topic, use_rag=False):
-    """Create the three tasks with format-specific instructions"""
+def create_tasks(web_researcher, rag_agent, writer, editor, citation_format, topic, use_rag=False):
+    """Create tasks with format-specific instructions"""
     
     format_info = CITATION_FORMATS[citation_format]
     
-    # Add RAG instructions if enabled
-    rag_instructions = ""
-    if use_rag:
-        rag_instructions = (
-            f"\n5. ALSO use the rag_search_tool to search your local PDF library\n"
-            f"6. Combine web search results with local PDF findings\n"
-            f"7. Format local sources appropriately:\n"
-            f"   - Mark as 'Local Document' or from 'Personal Library'\n"
-            f"   - Include filename and page number\n"
-            f"   - Use same {format_info['name']} style but note the source type\n"
-        )
-    
-    research_task = Task(
+    # Web Research Task (always created)
+    web_research_task = Task(
         description=(
             f"Research the topic: {topic}\n\n"
             f"REQUIRED STEPS:\n"
@@ -266,23 +269,53 @@ def create_tasks(researcher, writer, editor, citation_format, topic, use_rag=Fal
             f"   - Key concepts and definitions from the papers\n"
             f"   - Current state of research\n"
             f"   - Research gaps\n"
-            f"   - Complete {format_info['name']}-formatted reference list"
-            f"{rag_instructions}\n\n"
+            f"   - Complete {format_info['name']}-formatted reference list\n\n"
             f"Example {format_info['name']} reference:\n{format_info['example']}"
         ),
         expected_output=(
             f"A detailed research document containing:\n"
             f"- Summary of key findings from real papers\n"
-            f"- 5-7 {format_info['name']}-formatted references from web search"
-            + ("\n- Additional references from local PDF library (if found)" if use_rag else "")
-            + f"\n- Key technical points for the paper"
+            f"- 5-7 {format_info['name']}-formatted references from web search\n"
+            f"- Key technical points for the paper"
         ),
-        agent=researcher
+        agent=web_researcher
     )
     
+    # RAG Task (only if use_rag=True)
+    rag_task = None
+    if use_rag and rag_agent:
+        rag_task = Task(
+            description=(
+                f"Search local PDF library for content related to: {topic}\n\n"
+                f"REQUIRED STEPS:\n"
+                f"1. Use the rag_search_tool to search local PDFs for relevant content\n"
+                f"2. Find 3-5 most relevant excerpts from local documents\n"
+                f"3. For each excerpt, record:\n"
+                f"   - Filename\n"
+                f"   - Page number\n"
+                f"   - Relevant text excerpt (200-300 words)\n"
+                f"   - How it relates to the topic\n"
+                f"4. Format local document citations in {format_info['name']} style:\n"
+                f"   Mark as 'Local Document:' or 'Personal Library:'\n"
+                f"   Example: [Local-1] Filename.pdf, page X.\n"
+                f"5. Provide context on how these local sources ground the research\n\n"
+                f"Your findings will be combined with web research to create a well-grounded paper."
+            ),
+            expected_output=(
+                f"A local document research report containing:\n"
+                f"- 3-5 relevant excerpts from local PDFs\n"
+                f"- Properly formatted local document citations\n"
+                f"- Context on how local sources relate to the topic\n"
+                f"- Clear distinction from web sources"
+            ),
+            agent=rag_agent
+        )
+    
+    # Write Task
+    write_task_context = "web research" + (" and local document findings" if use_rag else "")
     write_task = Task(
         description=(
-            f"Using the research findings, write a complete scientific paper on: {topic}\n\n"
+            f"Using the {write_task_context}, write a complete scientific paper on: {topic}\n\n"
             f"Structure:\n"
             f"1. Title - Clear and descriptive\n"
             f"2. Abstract (150-200 words)\n"
@@ -294,6 +327,8 @@ def create_tasks(researcher, writer, editor, citation_format, topic, use_rag=Fal
             f"8. References - {format_info['name']}-formatted list\n\n"
             f"Citation Requirements:\n"
             f"- Use {format_info['name']} in-text format: {format_info['in_text']}\n"
+            f"- Cite BOTH web sources" + (" AND local documents" if use_rag else "") + "\n"
+            f"- Clearly distinguish web vs local sources in references\n"
             f"- Include minimum 5 properly cited references\n"
             f"- All citations must match the reference list\n"
             f"- Use formal academic language\n"
@@ -304,11 +339,14 @@ def create_tasks(researcher, writer, editor, citation_format, topic, use_rag=Fal
             f"- All required sections\n"
             f"- {format_info['name']} in-text citations throughout\n"
             f"- Complete reference list in {format_info['name']} format\n"
-            f"- Professional academic tone"
+            + ("- Mixed references (web + local sources)\n" if use_rag else "")
+            + f"- Professional academic tone"
         ),
-        agent=writer
+        agent=writer,
+        context=[web_research_task] + ([rag_task] if rag_task else [])
     )
     
+    # Edit Task
     edit_task = Task(
         description=(
             f"Review and edit the scientific paper for {format_info['name']} compliance.\n\n"
@@ -316,7 +354,8 @@ def create_tasks(researcher, writer, editor, citation_format, topic, use_rag=Fal
             f"1. All citations follow {format_info['name']} format exactly\n"
             f"2. In-text citations: {format_info['in_text']}\n"
             f"3. Reference list format: {format_info['reference_format']}\n"
-            f"4. Grammar and clarity\n"
+            + ("4. Local sources clearly marked and properly formatted\n" if use_rag else "")
+            + f"4. Grammar and clarity\n"
             f"5. Technical accuracy\n"
             f"6. Proper paper structure\n"
             f"7. All in-text citations have corresponding references\n"
@@ -329,12 +368,17 @@ def create_tasks(researcher, writer, editor, citation_format, topic, use_rag=Fal
             f"- Perfect {format_info['name']} formatting\n"
             f"- Correct grammar and style\n"
             f"- Properly formatted citations and references\n"
-            f"- Clear, professional writing"
+            + ("- Clear distinction between web and local sources\n" if use_rag else "")
+            + f"- Clear, professional writing"
         ),
         agent=editor
     )
     
-    return research_task, write_task, edit_task
+    # Return tasks based on whether RAG is enabled
+    if use_rag:
+        return web_research_task, rag_task, write_task, edit_task
+    else:
+        return web_research_task, write_task, edit_task
 
 
 def markdown_to_pdf(markdown_content, output_path, citation_format):
@@ -540,6 +584,9 @@ def main():
         print("❌ Error: Topic cannot be empty!")
         return
     
+    # Optional: custom filename
+    custom_filename = input("Custom output filename (leave blank for auto-generated): ").strip()
+    
     # Check if RAG is available and ask user
     use_rag = False
     rag_ready, rag_message = check_rag_ready()
@@ -570,21 +617,33 @@ def main():
         # Create agents
         print(f"👥 Creating AI agents for {format_info['name']} format...")
         if use_rag:
-            print("   + RAG-enhanced researcher (web + local PDFs)")
-        researcher, writer, editor = create_agents(llm, citation_format, use_rag)
+            print("   + 4 agents: Web Researcher, Local Document Specialist, Writer, Editor")
+            web_researcher, rag_agent, writer, editor = create_agents(llm, citation_format, use_rag)
+            agents_list = [web_researcher, rag_agent, writer, editor]
+        else:
+            print("   + 3 agents: Web Researcher, Writer, Editor")
+            web_researcher, writer, editor = create_agents(llm, citation_format, use_rag)
+            agents_list = [web_researcher, writer, editor]
         
         # Create tasks
         print("📋 Setting up research, writing, and editing tasks...")
-        research_task, write_task, edit_task = create_tasks(
-            researcher, writer, editor, citation_format, topic, use_rag
-        )
+        if use_rag:
+            web_research_task, rag_task, write_task, edit_task = create_tasks(
+                web_researcher, rag_agent, writer, editor, citation_format, topic, use_rag
+            )
+            tasks_list = [web_research_task, rag_task, write_task, edit_task]
+        else:
+            web_research_task, write_task, edit_task = create_tasks(
+                web_researcher, None, writer, editor, citation_format, topic, use_rag
+            )
+            tasks_list = [web_research_task, write_task, edit_task]
         
         # Create crew
         print("🚀 Assembling the crew and starting work...")
         print(f"⏱️  Using {REQUEST_DELAY}s delays between tasks to avoid rate limits\n")
         crew = Crew(
-            agents=[researcher, writer, editor],
-            tasks=[research_task, write_task, edit_task],
+            agents=agents_list,
+            tasks=tasks_list,
             verbose=2
         )
         
@@ -593,8 +652,14 @@ def main():
         result = crew.kickoff(inputs={"topic": topic, citation_format: citation_format})
         
         # Save markdown
-        safe_topic = topic.replace(' ', '_').replace('/', '_').lower()
-        md_filename = f"paper_{citation_format.lower()}_{safe_topic}.md"
+        if custom_filename:
+            # Use custom filename
+            md_filename = f"{custom_filename}.md"
+        else:
+            # Auto-generate from topic
+            safe_topic = topic.replace(' ', '_').replace('/', '_').lower()
+            md_filename = f"paper_{citation_format.lower()}_{safe_topic}.md"
+        
         with open(md_filename, 'w', encoding='utf-8') as f:
             f.write(result)
         
