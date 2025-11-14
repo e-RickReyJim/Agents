@@ -6,7 +6,11 @@ Run this script once to index your local PDF library
 import os
 import sys
 from pathlib import Path
-from rag_utils import RAGSystem, check_rag_ready
+
+# Add src to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from src.rag.rag_system import RAGSystem, check_rag_ready
 
 
 def main():
@@ -73,7 +77,7 @@ def main():
             print(f"\n📝 PDF files indexed:")
             for pdf in metadata['pdf_files']:
                 print(f"   - {pdf}")
-            print(f"\n✅ You can now use RAG in scientific_paper_writer.py")
+            print(f"\n✅ You can now use RAG in the paper writer")
             print(f"   The system will automatically search these PDFs when enabled.")
             
         else:
@@ -101,7 +105,7 @@ def main():
         print(f"⚠️  Test search found no results (this is OK if PDFs don't contain test keywords)")
     
     print(f"\n{'=' * 60}")
-    print("🎉 Setup complete! Run: python scientific_paper_writer.py")
+    print("🎉 Setup complete! Run: python scripts/paper_writer.py")
     print(f"{'=' * 60}\n")
 
 

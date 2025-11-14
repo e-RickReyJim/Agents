@@ -1,5 +1,5 @@
 """
-RAG Utilities for Local PDF Document Retrieval
+RAG System for Local PDF Document Retrieval
 Handles PDF loading, chunking, embedding, and vector search
 """
 
@@ -244,7 +244,7 @@ def check_rag_ready(pdf_folder: str = "./pdf_library", db_folder: str = "./rag_d
     # Check if index exists
     index_file = db_path / "faiss_index.bin"
     if not index_file.exists():
-        return False, f"RAG index not found. Run 'python rag_setup.py' first."
+        return False, f"RAG index not found. Run 'python scripts/rag_setup.py' first."
     
     return True, f"RAG ready: {len(pdf_files)} PDFs indexed"
 
@@ -254,7 +254,7 @@ if __name__ == "__main__":
     rag = RAGSystem()
     
     if not rag.load_index():
-        print("No index found. Run rag_setup.py first.")
+        print("No index found. Run scripts/rag_setup.py first.")
     else:
         # Test search
         query = "machine learning"
