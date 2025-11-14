@@ -1,0 +1,377 @@
+[
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: CKD screening, Cost-effectiveness analysis",
+    "output": "Despite the majority of patients with chronic kidney disease (CKD) live in low- and middle-income countries, most evidence on screening strategies is derived from high-income countries, where the contexts differ significantly. This study aims to assess the cost-effectiveness of population-based CKD screening strategies in both the general population and adults with diabetes in China."
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: gene expression, kidney biopsy, machine learning",
+    "output": "Current classification of chronic kidney disease (CKD) into stages using indirect systemic measures (estimated glomerular filtration rate (eGFR) and albuminuria) is agnostic to the heterogeneity of underlying molecular processes in the kidney thereby limiting precision medicine approaches. To generate a novel CKD categorization that directly reflects within kidney disease drivers we analyzed publicly available transcriptomic data from kidney biopsy tissue. A Self-Organizing Maps unsupervised artificial neural network machine-learning algorithm was used to stratify a total of 369 patients with CKD and 46 living kidney donors as healthy controls. Unbiased stratification of the discovery cohort resulted in identification of four novel molecular categories of disease termed CKD-Blue, CKD-Gold, CKD-Olive, CKD-Plum that were replicated in independent CKD and diabetic kidney disease datasets and can be further tested on any external data at kidneyclass.org. Each molecular category spanned acr"
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: acute kidney injury (AKI), diagnosis, fecal peritonitis inhibition decreased renal IL-1β levels",
+    "output": "Sepsis-associated acute kidney injury (SAAKI) poses a significant challenge in critical care medicine, characterized by high morbidity and mortality rates and often leading to chronic kidney disease (CKD). This article provides a comprehensive overview of the pathophysiological mechanisms, diagnostic advancements, therapeutic strategies, and prognostic studies of SAAKI. In terms of pathophysiological mechanisms, research has shifted from the traditional renal ischemia-centric view to a multidimensional interplay involving microcirculatory disturbances, immune metabolic disorders, and programmed cell death. Regarding diagnosis, traditional Kidney Disease: Improving Global Outcomes (KDIGO) criteria exhibit limitations, whereas novel biomarkers and imaging techniques offer new avenues for early diagnosis. Therapeutic strategies encompass early intervention, hemodynamic management, renal replacement therapy, and targeted therapies; however, controversy persists regarding the optimal timing"
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: Computational pathology, Glomerular lesion, Predictive uncertainty",
+    "output": "Recognizing glomerular lesions is essential in diagnosing chronic kidney disease. However, deep learning faces challenges due to the lesion heterogeneity, superposition, progression, and tissue incompleteness, leading to uncertainty in model predictions. Therefore, it is crucial to analyze pathology-related predictive uncertainty in glomerular lesion recognition and unveil its relationship with pathological properties and its impact on model performance."
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: 30-day hospital readmission, Acute ischemic stroke, Acute kidney injury (AKI)",
+    "output": "Audit logs in electronic health record (EHR) systems capture interactions of providers with clinical data. We determine if machine learning (ML) models trained using audit logs in conjunction with clinical data (\"observational supervision\") outperform ML models trained using clinical data alone in clinical outcome prediction tasks, and whether they are more robust to temporal distribution shifts in the data."
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: Descriptors, Endososcopy, Explainability",
+    "output": "The in-vivo identification of the kidney stone types during an ureteroscopy would be a major medical advance in urology, as it could reduce the time of the tedious renal calculi extraction process, while diminishing infection risks. Furthermore, such an automated procedure would make possible to prescribe anti-recurrence treatments immediately. Nowadays, only few experienced urologists are able to recognize the kidney stone types in the images of the videos displayed on a screen during the endoscopy. This visual recognition by urologists is also highly operator dependent. Thus, several deep learning (DL) models have recently been proposed to automatically recognize the kidney stone types using ureteroscopic images. However, these DL models are of black box nature and do not establish the relationship of the visual features they used to take the decision with the color, texture and morphological features visually analyzed in biological laboratories to determine the type of extracted kid"
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: Kidney lesion sub types, Multi phase computed tomography, Pseudo-labeling",
+    "output": "Kidney lesion subtype identification is essential for precise diagnosis and personalized treatment planning. However, achieving reliable classification remains challenging due to factors such as inter-patient anatomical variability, incomplete multi-phase CT acquisitions, and ill-defined or overlapping lesion boundaries. In addition, genetic and ethnic morphological variations introduce inconsistent imaging patterns, reducing the generalizability of conventional deep learning models. To address these challenges, we introduce a unified framework called Phase-aware Cross-Scale U-MAMba and Switch Atrous Bifovea EfficientNet B7 (PCU-SABENet), which integrates multi-phase reconstruction, fine-grained lesion segmentation, and robust subtype classification. The PhaseGAN-3D synthesizes missing CT phases using binary mask-guided inter-phase priors, enabling complete four-phase reconstruction even under partial acquisition conditions. The PCU segmentation module combines Contextual Attention Blo"
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: chronic kidney disease, machine learning",
+    "output": "Kidney biopsy pathology via transmission electron microscopy (TEM) is essential for diagnosing glomerular diseases, offering critical information on glomerular basement membrane (GBM) thickness, foot process (FP) number, and electron-dense deposits (EDDs). These tasks are laborious and time-consuming."
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: Acute kidney injury, Heart failure, MIMIC",
+    "output": "Heart failure (HF) complicated by acute kidney injury (AKI) significantly impacts patient outcomes, and it is crucial to make early predictions of short-term mortality. This study is focused on developing an interpretable machine learning model to enhance early prediction accuracy in such clinical scenarios."
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: 3-dimensional ResNet, cross-modal fusion, deep learning",
+    "output": "Renal cell carcinoma (RCC) is a malignant renal tumor that poses a significant threat to patient health. Accurate preoperative pathological grading plays a crucial role in determining the appropriate treatment for this disease. Currently, deep learning technology has become an important method for pathological grading of RCC. However, existing methods primarily rely on single-phase computed tomography (CT) imaging for analysis and prediction, which has limitations such as missing small lesions, one-sided evaluation, and local focusing issues. Therefore, this study proposes a multi-modal deep learning algorithm that integrates multi-phase enhanced CT images with clinical variable data, aiming to provide a basis for predicting the pathological grading of RCC."
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: bone, bones, deep learning",
+    "output": "With the progressive increase in aging populations, the use of opportunistic computed tomography (CT) scanning is increasing, which could be a valuable method for acquiring information on both muscles and bones of aging populations."
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: South Korea, acute kidney injury, anesthesia",
+    "output": "Postoperative acute kidney injury (AKI) is a significant risk associated with surgeries under general anesthesia, often leading to increased mortality and morbidity. Existing predictive models for postoperative AKI are usually limited to specific surgical areas or require external validation."
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: SHAP, Shapley additive explanation, acute kidney injury",
+    "output": "Sepsis-associated acute kidney injury (SA-AKI) is a frequent and life-threatening complication in patients in the intensive care unit (ICU), significantly increasing both mortality rates and the risk of chronic kidney dysfunction. However, existing prediction models have often focused on overall risk and lack severity-based stratification, which limits their clinical applicability."
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: COVID-19, TCR repertoire, artificial intelligence",
+    "output": "Underlying medical conditions, such as cancer, kidney disease and heart failure, are associated with a higher risk for severe COVID-19. Accurate classification of COVID-19 patients with underlying medical conditions is critical for personalized treatment decision and prognosis estimation. In this study, we propose an interpretable artificial intelligence model termed VDJMiner to mine the underlying medical conditions and predict the prognosis of COVID-19 patients according to their immune repertoires. In a cohort of more than 1400 COVID-19 patients, VDJMiner accurately identifies multiple underlying medical conditions, including cancers, chronic kidney disease, autoimmune disease, diabetes, congestive heart failure, coronary artery disease, asthma and chronic obstructive pulmonary disease, with an average area under the receiver operating characteristic curve (AUC) of 0.961. Meanwhile, in this same cohort, VDJMiner achieves an AUC of 0.922 in predicting severe COVID-19. Moreover, VDJMi"
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: Autoencoder, Chronic kidney disease, Deep learning",
+    "output": "The two leading causes of chronic kidney disease (CKD) are excessive blood pressure and diabetes. Researchers worldwide utilize the rate of globular filtration and kidney inflammation biomarkers to identify chronic kidney disease that gradually reduces renal function. The mortality rate for CKD is high, and thus, a person with this illness is more likely to pass away at a younger age. Healthcare professionals must diagnose the various illnesses connected to this deadly disease as promptly as possible to lighten the impact of CKD. A quantum machine learning (QML) based technique is presented in this research to help with the early diagnosis and prognosis of CKD. The proposed research comprises four phases: data pre-processing, data augmentation, feature selection, and classification. In the first phase, Kalman filter and data normalization techniques are applied to handle the missing and noisy data. In the second phase, data augmentation uses sparse autoencoders to balance the data for "
+  },
+  {
+    "instruction": "Write an abstract for a scientific paper on the given topic.",
+    "input": "Topic: Cardiac events, kidney failure, machine learning",
+    "output": "People with kidney failure undergoing noncardiac surgery face an elevated risk of cardiovascular events and mortality. Existing risk prediction tools for perioperative events are either inaccurate in this population or include many variables that may complicate implementation. We developed and evaluated the performance of simplified machine-learning models for major cardiac events and mortality within 30 days after noncardiac surgery in patients with kidney failure in Alberta and Manitoba, Canada."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Cost-effectiveness of population-based screening for chronic kidney disease among the general population and adults with diabetes in China: a modelling study.",
+    "output": "Despite the majority of patients with chronic kidney disease (CKD) live in low- and middle-income countries, most evidence on screening strategies is derived from high-income countries, where the contexts differ significantly. This study aims to assess the cost-effectiveness of population-based CKD screening strategies in both the general population and adults with diabetes in China.."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Unbiased kidney-centric molecular categorization of chronic kidney disease as a step towards precision medicine.",
+    "output": "Current classification of chronic kidney disease (CKD) into stages using indirect systemic measures (estimated glomerular filtration rate (eGFR) and albuminuria) is agnostic to the heterogeneity of underlying molecular processes in the kidney thereby limiting precision medicine approaches. To generate a novel CKD categorization that directly reflects within kidney disease drivers we analyzed publicly available transcriptomic data from kidney biopsy tissue."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Review of research progress in sepsis-associated acute kidney injury.",
+    "output": "Sepsis-associated acute kidney injury (SAAKI) poses a significant challenge in critical care medicine, characterized by high morbidity and mortality rates and often leading to chronic kidney disease (CKD). This article provides a comprehensive overview of the pathophysiological mechanisms, diagnostic advancements, therapeutic strategies, and prognostic studies of SAAKI."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Unveiling pathology-related predictive uncertainty of glomerular lesion recognition using prototype learning.",
+    "output": "Recognizing glomerular lesions is essential in diagnosing chronic kidney disease. However, deep learning faces challenges due to the lesion heterogeneity, superposition, progression, and tissue incompleteness, leading to uncertainty in model predictions."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Clinical outcome prediction using observational supervision with electronic health records and audit logs.",
+    "output": "Audit logs in electronic health record (EHR) systems capture interactions of providers with clinical data. We determine if machine learning (ML) models trained using audit logs in conjunction with clinical data (\"observational supervision\") outperform ML models trained using clinical data alone in clinical outcome prediction tasks, and whether they are more robust to temporal distribution shifts in the data.."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Improving prototypical parts abstraction for case-based reasoning explanations designed for the kidney stone type recognition.",
+    "output": "The in-vivo identification of the kidney stone types during an ureteroscopy would be a major medical advance in urology, as it could reduce the time of the tedious renal calculi extraction process, while diminishing infection risks. Furthermore, such an automated procedure would make possible to prescribe anti-recurrence treatments immediately."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: A phase-aware Cross-Scale U-MAMba with uncertainty-aware segmentation and Switch Atrous Bifovea EfficientNetB7 classification of kidney lesion subtype.",
+    "output": "Kidney lesion subtype identification is essential for precise diagnosis and personalized treatment planning. However, achieving reliable classification remains challenging due to factors such as inter-patient anatomical variability, incomplete multi-phase CT acquisitions, and ill-defined or overlapping lesion boundaries."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: AI-Based System for Analysis of Electron Microscope Images in Glomerular Disease.",
+    "output": "Kidney biopsy pathology via transmission electron microscopy (TEM) is essential for diagnosing glomerular diseases, offering critical information on glomerular basement membrane (GBM) thickness, foot process (FP) number, and electron-dense deposits (EDDs). These tasks are laborious and time-consuming.."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: [Predicting Intensive Care Unit Mortality in Patients With Heart Failure Combined With Acute Kidney Injury Using an Interpretable Machine Learning Model: A Retrospective Cohort Study].",
+    "output": "Heart failure (HF) complicated by acute kidney injury (AKI) significantly impacts patient outcomes, and it is crucial to make early predictions of short-term mortality. This study is focused on developing an interpretable machine learning model to enhance early prediction accuracy in such clinical scenarios.."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Deep learning algorithm for pathological grading of renal cell carcinoma based on multi-phase enhanced CT.",
+    "output": "Renal cell carcinoma (RCC) is a malignant renal tumor that poses a significant threat to patient health. Accurate preoperative pathological grading plays a crucial role in determining the appropriate treatment for this disease."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: A Computed Tomography-Based Fracture Prediction Model With Images of Vertebral Bones and Muscles by Employing Deep Learning: Development and Validation Study.",
+    "output": "With the progressive increase in aging populations, the use of opportunistic computed tomography (CT) scanning is increasing, which could be a valuable method for acquiring information on both muscles and bones of aging populations.."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: A Risk Prediction Model (CMC-AKIX) for Postoperative Acute Kidney Injury Using Machine Learning: Algorithm Development and Validation.",
+    "output": "Postoperative acute kidney injury (AKI) is a significant risk associated with surgeries under general anesthesia, often leading to increased mortality and morbidity. Existing predictive models for postoperative AKI are usually limited to specific surgical areas or require external validation.."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Prediction of Moderate-to-Severe Sepsis-Associated Acute Kidney Injury Using a Dual-Timepoint Machine Learning Model: Development, Multiregional Validation, and Clinical Deployment Study.",
+    "output": "Sepsis-associated acute kidney injury (SA-AKI) is a frequent and life-threatening complication in patients in the intensive care unit (ICU), significantly increasing both mortality rates and the risk of chronic kidney dysfunction. However, existing prediction models have often focused on overall risk and lack severity-based stratification, which limits their clinical applicability.."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Interpretable artificial intelligence model for accurate identification of medical conditions using immune repertoire.",
+    "output": "Underlying medical conditions, such as cancer, kidney disease and heart failure, are associated with a higher risk for severe COVID-19. Accurate classification of COVID-19 patients with underlying medical conditions is critical for personalized treatment decision and prognosis estimation."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Variational quantum classifier-based early identification and classification of chronic kidney disease using sparse autoencoder and LASSO shrinkage.",
+    "output": "The two leading causes of chronic kidney disease (CKD) are excessive blood pressure and diabetes. Researchers worldwide utilize the rate of globular filtration and kidney inflammation biomarkers to identify chronic kidney disease that gradually reduces renal function."
+  },
+  {
+    "instruction": "Write an introduction paragraph for a scientific paper.",
+    "input": "Topic: Development and Evaluation of Machine Learning Models to Predict the Risk of Major Cardiac Events and Death for People With Kidney Failure Having Non-Cardiac Surgery.",
+    "output": "People with kidney failure undergoing noncardiac surgery face an elevated risk of cardiovascular events and mortality. Existing risk prediction tools for perioperative events are either inaccurate in this population or include many variables that may complicate implementation."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Fengyu Wen, Jinwei Wang, Chao Yang. Title: Cost-effectiveness of population-based screening for chronic kidney disease among the general population and adults with diabetes in China: a modelling study.. Journal: The Lancet regional health. Western Pacific. Year: 2025.",
+    "output": "[1] Fengyu Wen, Jinwei Wang, Chao Yang et al., \"Cost-effectiveness of population-based screening for chronic kidney disease among the general population and adults with diabetes in China: a modelling study.\", The Lancet regional health. Western Pacific, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Anna Reznichenko, Viji Nair, Sean Eddy. Title: Unbiased kidney-centric molecular categorization of chronic kidney disease as a step towards precision medicine.. Journal: Kidney international. Year: 2024.",
+    "output": "[1] Anna Reznichenko, Viji Nair, Sean Eddy et al., \"Unbiased kidney-centric molecular categorization of chronic kidney disease as a step towards precision medicine.\", Kidney international, 2024."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Wanning Nian, Weichen Tao, Haiyi Zhang. Title: Review of research progress in sepsis-associated acute kidney injury.. Journal: Frontiers in molecular biosciences. Year: 2025.",
+    "output": "[1] Wanning Nian, Weichen Tao, Haiyi Zhang, \"Review of research progress in sepsis-associated acute kidney injury.\", Frontiers in molecular biosciences, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Qiming He, Yingming Xu, Qiang Huang. Title: Unveiling pathology-related predictive uncertainty of glomerular lesion recognition using prototype learning.. Journal: Journal of biomedical informatics. Year: 2025.",
+    "output": "[1] Qiming He, Yingming Xu, Qiang Huang et al., \"Unveiling pathology-related predictive uncertainty of glomerular lesion recognition using prototype learning.\", Journal of biomedical informatics, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Nandita Bhaskhar, Wui Ip, Jonathan H Chen. Title: Clinical outcome prediction using observational supervision with electronic health records and audit logs.. Journal: Journal of biomedical informatics. Year: 2023.",
+    "output": "[1] Nandita Bhaskhar, Wui Ip, Jonathan H Chen et al., \"Clinical outcome prediction using observational supervision with electronic health records and audit logs.\", Journal of biomedical informatics, 2023."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Daniel Flores-Araiza, Francisco Lopez-Tiro, Clément Larose. Title: Improving prototypical parts abstraction for case-based reasoning explanations designed for the kidney stone type recognition.. Journal: Artificial intelligence in medicine. Year: 2025.",
+    "output": "[1] Daniel Flores-Araiza, Francisco Lopez-Tiro, Clément Larose et al., \"Improving prototypical parts abstraction for case-based reasoning explanations designed for the kidney stone type recognition.\", Artificial intelligence in medicine, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Shamija Sherryl Rmr, Sudhan Mb, Deeptha R. Title: A phase-aware Cross-Scale U-MAMba with uncertainty-aware segmentation and Switch Atrous Bifovea EfficientNetB7 classification of kidney lesion subtype.. Journal: Lasers in medical science. Year: 2025.",
+    "output": "[1] Shamija Sherryl Rmr, Sudhan Mb, Deeptha R et al., \"A phase-aware Cross-Scale U-MAMba with uncertainty-aware segmentation and Switch Atrous Bifovea EfficientNetB7 classification of kidney lesion subtype.\", Lasers in medical science, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Pengcheng Ma, Jinbang Li, Zhengyu Zhang. Title: AI-Based System for Analysis of Electron Microscope Images in Glomerular Disease.. Journal: JAMA network open. Year: 2025.",
+    "output": "[1] Pengcheng Ma, Jinbang Li, Zhengyu Zhang et al., \"AI-Based System for Analysis of Electron Microscope Images in Glomerular Disease.\", JAMA network open, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Xinyao Luo, Dingyuan Wan, Ke Wang. Title: [Predicting Intensive Care Unit Mortality in Patients With Heart Failure Combined With Acute Kidney Injury Using an Interpretable Machine Learning Model: A Retrospective Cohort Study].. Journal: Sichuan da xue xue bao. Yi xue ban = Journal of Sichuan University. Medical science edition. Year: 2025.",
+    "output": "[1] Xinyao Luo, Dingyuan Wan, Ke Wang et al., \"[Predicting Intensive Care Unit Mortality in Patients With Heart Failure Combined With Acute Kidney Injury Using an Interpretable Machine Learning Model: A Retrospective Cohort Study].\", Sichuan da xue xue bao. Yi xue ban = Journal of Sichuan University. Medical science edition, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Haozhong Chen, Jun Liu, Kai Deng. Title: Deep learning algorithm for pathological grading of renal cell carcinoma based on multi-phase enhanced CT.. Journal: Zhong nan da xue xue bao. Yi xue ban = Journal of Central South University. Medical sciences. Year: 2025.",
+    "output": "[1] Haozhong Chen, Jun Liu, Kai Deng et al., \"Deep learning algorithm for pathological grading of renal cell carcinoma based on multi-phase enhanced CT.\", Zhong nan da xue xue bao. Yi xue ban = Journal of Central South University. Medical sciences, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Sung Hye Kong, Wonwoo Cho, Sung Bae Park. Title: A Computed Tomography-Based Fracture Prediction Model With Images of Vertebral Bones and Muscles by Employing Deep Learning: Development and Validation Study.. Journal: Journal of medical Internet research. Year: 2024.",
+    "output": "[1] Sung Hye Kong, Wonwoo Cho, Sung Bae Park et al., \"A Computed Tomography-Based Fracture Prediction Model With Images of Vertebral Bones and Muscles by Employing Deep Learning: Development and Validation Study.\", Journal of medical Internet research, 2024."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Ji Won Min, Jae-Hong Min, Se-Hyun Chang. Title: A Risk Prediction Model (CMC-AKIX) for Postoperative Acute Kidney Injury Using Machine Learning: Algorithm Development and Validation.. Journal: Journal of medical Internet research. Year: 2025.",
+    "output": "[1] Ji Won Min, Jae-Hong Min, Se-Hyun Chang et al., \"A Risk Prediction Model (CMC-AKIX) for Postoperative Acute Kidney Injury Using Machine Learning: Algorithm Development and Validation.\", Journal of medical Internet research, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Xinbo Ge, Weiwei Chen, Jianshan Shi. Title: Prediction of Moderate-to-Severe Sepsis-Associated Acute Kidney Injury Using a Dual-Timepoint Machine Learning Model: Development, Multiregional Validation, and Clinical Deployment Study.. Journal: Journal of medical Internet research. Year: 2025.",
+    "output": "[1] Xinbo Ge, Weiwei Chen, Jianshan Shi et al., \"Prediction of Moderate-to-Severe Sepsis-Associated Acute Kidney Injury Using a Dual-Timepoint Machine Learning Model: Development, Multiregional Validation, and Clinical Deployment Study.\", Journal of medical Internet research, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Yu Zhao, Bing He, Zhimeng Xu. Title: Interpretable artificial intelligence model for accurate identification of medical conditions using immune repertoire.. Journal: Briefings in bioinformatics. Year: 2023.",
+    "output": "[1] Yu Zhao, Bing He, Zhimeng Xu et al., \"Interpretable artificial intelligence model for accurate identification of medical conditions using immune repertoire.\", Briefings in bioinformatics, 2023."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: P Parthasarathi, Haya Mesfer Alshahrani, K Venkatachalam. Title: Variational quantum classifier-based early identification and classification of chronic kidney disease using sparse autoencoder and LASSO shrinkage.. Journal: PeerJ. Computer science. Year: 2025.",
+    "output": "[1] P Parthasarathi, Haya Mesfer Alshahrani, K Venkatachalam et al., \"Variational quantum classifier-based early identification and classification of chronic kidney disease using sparse autoencoder and LASSO shrinkage.\", PeerJ. Computer science, 2025."
+  },
+  {
+    "instruction": "Format this reference in IEEE citation style.",
+    "input": "Authors: Gurpreet S Pabla, Tyrone G Harrison, Thomas Ferguson. Title: Development and Evaluation of Machine Learning Models to Predict the Risk of Major Cardiac Events and Death for People With Kidney Failure Having Non-Cardiac Surgery.. Journal: American journal of kidney diseases : the official journal of the National Kidney Foundation. Year: 2025.",
+    "output": "[1] Gurpreet S Pabla, Tyrone G Harrison, Thomas Ferguson et al., \"Development and Evaluation of Machine Learning Models to Predict the Risk of Major Cardiac Events and Death for People With Kidney Failure Having Non-Cardiac Surgery.\", American journal of kidney diseases : the official journal of the National Kidney Foundation, 2025."
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: Unbiased kidney-centric molecular categorization of chronic kidney disease as a step towards precision medicine.",
+    "output": "Current classification of chronic kidney disease (CKD) into stages using indirect systemic measures (estimated glomerular filtration rate (eGFR) and albuminuria) is agnostic to the heterogeneity of underlying molecular processes in the kidney thereby limiting precision medicine approaches. To generate a novel CKD categorization that directly reflects within kidney disease drivers we analyzed publicly available transcriptomic data from kidney biopsy tissue. A Self-Organizing Maps unsupervised artificial neural network machine-learning algorithm was used to stratify a total of 369 patients with CKD and 46 living kidney donors as healthy controls. Unbiased stratification of the discovery cohort resulted in identification of four novel molecular categories of disease termed CKD-Blue, CKD-Gold,"
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: Review of research progress in sepsis-associated acute kidney injury.",
+    "output": "Sepsis-associated acute kidney injury (SAAKI) poses a significant challenge in critical care medicine, characterized by high morbidity and mortality rates and often leading to chronic kidney disease (CKD). This article provides a comprehensive overview of the pathophysiological mechanisms, diagnostic advancements, therapeutic strategies, and prognostic studies of SAAKI. In terms of pathophysiological mechanisms, research has shifted from the traditional renal ischemia-centric view to a multidimensional interplay involving microcirculatory disturbances, immune metabolic disorders, and programmed cell death. Regarding diagnosis, traditional Kidney Disease: Improving Global Outcomes (KDIGO) criteria exhibit limitations, whereas novel biomarkers and imaging techniques offer new avenues for ear"
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: Unveiling pathology-related predictive uncertainty of glomerular lesion recognition using prototype learning.",
+    "output": "Recognizing glomerular lesions is essential in diagnosing chronic kidney disease. However, deep learning faces challenges due to the lesion heterogeneity, superposition, progression, and tissue incompleteness, leading to uncertainty in model predictions. Therefore, it is crucial to analyze pathology-related predictive uncertainty in glomerular lesion recognition and unveil its relationship with pathological properties and its impact on model performance."
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: Clinical outcome prediction using observational supervision with electronic health records and audit logs.",
+    "output": "Audit logs in electronic health record (EHR) systems capture interactions of providers with clinical data. We determine if machine learning (ML) models trained using audit logs in conjunction with clinical data (\"observational supervision\") outperform ML models trained using clinical data alone in clinical outcome prediction tasks, and whether they are more robust to temporal distribution shifts in the data."
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: Improving prototypical parts abstraction for case-based reasoning explanations designed for the kidney stone type recognition.",
+    "output": "The in-vivo identification of the kidney stone types during an ureteroscopy would be a major medical advance in urology, as it could reduce the time of the tedious renal calculi extraction process, while diminishing infection risks. Furthermore, such an automated procedure would make possible to prescribe anti-recurrence treatments immediately. Nowadays, only few experienced urologists are able to recognize the kidney stone types in the images of the videos displayed on a screen during the endoscopy. This visual recognition by urologists is also highly operator dependent. Thus, several deep learning (DL) models have recently been proposed to automatically recognize the kidney stone types using ureteroscopic images. However, these DL models are of black box nature and do not establish the r"
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: A phase-aware Cross-Scale U-MAMba with uncertainty-aware segmentation and Switch Atrous Bifovea EfficientNetB7 classification of kidney lesion subtype.",
+    "output": "Kidney lesion subtype identification is essential for precise diagnosis and personalized treatment planning. However, achieving reliable classification remains challenging due to factors such as inter-patient anatomical variability, incomplete multi-phase CT acquisitions, and ill-defined or overlapping lesion boundaries. In addition, genetic and ethnic morphological variations introduce inconsistent imaging patterns, reducing the generalizability of conventional deep learning models. To address these challenges, we introduce a unified framework called Phase-aware Cross-Scale U-MAMba and Switch Atrous Bifovea EfficientNet B7 (PCU-SABENet), which integrates multi-phase reconstruction, fine-grained lesion segmentation, and robust subtype classification. The PhaseGAN-3D synthesizes missing CT "
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: [Predicting Intensive Care Unit Mortality in Patients With Heart Failure Combined With Acute Kidney Injury Using an Interpretable Machine Learning Model: A Retrospective Cohort Study].",
+    "output": "Heart failure (HF) complicated by acute kidney injury (AKI) significantly impacts patient outcomes, and it is crucial to make early predictions of short-term mortality. This study is focused on developing an interpretable machine learning model to enhance early prediction accuracy in such clinical scenarios."
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: Deep learning algorithm for pathological grading of renal cell carcinoma based on multi-phase enhanced CT.",
+    "output": "Renal cell carcinoma (RCC) is a malignant renal tumor that poses a significant threat to patient health. Accurate preoperative pathological grading plays a crucial role in determining the appropriate treatment for this disease. Currently, deep learning technology has become an important method for pathological grading of RCC. However, existing methods primarily rely on single-phase computed tomography (CT) imaging for analysis and prediction, which has limitations such as missing small lesions, one-sided evaluation, and local focusing issues. Therefore, this study proposes a multi-modal deep learning algorithm that integrates multi-phase enhanced CT images with clinical variable data, aiming to provide a basis for predicting the pathological grading of RCC."
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: A Computed Tomography-Based Fracture Prediction Model With Images of Vertebral Bones and Muscles by Employing Deep Learning: Development and Validation Study.",
+    "output": "With the progressive increase in aging populations, the use of opportunistic computed tomography (CT) scanning is increasing, which could be a valuable method for acquiring information on both muscles and bones of aging populations."
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: A Risk Prediction Model (CMC-AKIX) for Postoperative Acute Kidney Injury Using Machine Learning: Algorithm Development and Validation.",
+    "output": "Postoperative acute kidney injury (AKI) is a significant risk associated with surgeries under general anesthesia, often leading to increased mortality and morbidity. Existing predictive models for postoperative AKI are usually limited to specific surgical areas or require external validation."
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: Prediction of Moderate-to-Severe Sepsis-Associated Acute Kidney Injury Using a Dual-Timepoint Machine Learning Model: Development, Multiregional Validation, and Clinical Deployment Study.",
+    "output": "Sepsis-associated acute kidney injury (SA-AKI) is a frequent and life-threatening complication in patients in the intensive care unit (ICU), significantly increasing both mortality rates and the risk of chronic kidney dysfunction. However, existing prediction models have often focused on overall risk and lack severity-based stratification, which limits their clinical applicability."
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: Interpretable artificial intelligence model for accurate identification of medical conditions using immune repertoire.",
+    "output": "Underlying medical conditions, such as cancer, kidney disease and heart failure, are associated with a higher risk for severe COVID-19. Accurate classification of COVID-19 patients with underlying medical conditions is critical for personalized treatment decision and prognosis estimation. In this study, we propose an interpretable artificial intelligence model termed VDJMiner to mine the underlying medical conditions and predict the prognosis of COVID-19 patients according to their immune repertoires. In a cohort of more than 1400 COVID-19 patients, VDJMiner accurately identifies multiple underlying medical conditions, including cancers, chronic kidney disease, autoimmune disease, diabetes, congestive heart failure, coronary artery disease, asthma and chronic obstructive pulmonary disease,"
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: Variational quantum classifier-based early identification and classification of chronic kidney disease using sparse autoencoder and LASSO shrinkage.",
+    "output": "The two leading causes of chronic kidney disease (CKD) are excessive blood pressure and diabetes. Researchers worldwide utilize the rate of globular filtration and kidney inflammation biomarkers to identify chronic kidney disease that gradually reduces renal function. The mortality rate for CKD is high, and thus, a person with this illness is more likely to pass away at a younger age. Healthcare professionals must diagnose the various illnesses connected to this deadly disease as promptly as possible to lighten the impact of CKD. A quantum machine learning (QML) based technique is presented in this research to help with the early diagnosis and prognosis of CKD. The proposed research comprises four phases: data pre-processing, data augmentation, feature selection, and classification. In the"
+  },
+  {
+    "instruction": "Describe the methodology for this research study.",
+    "input": "Research topic: Development and Evaluation of Machine Learning Models to Predict the Risk of Major Cardiac Events and Death for People With Kidney Failure Having Non-Cardiac Surgery.",
+    "output": "People with kidney failure undergoing noncardiac surgery face an elevated risk of cardiovascular events and mortality. Existing risk prediction tools for perioperative events are either inaccurate in this population or include many variables that may complicate implementation. We developed and evaluated the performance of simplified machine-learning models for major cardiac events and mortality within 30 days after noncardiac surgery in patients with kidney failure in Alberta and Manitoba, Canada."
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: Cost-effectiveness of population-based screening for chronic kidney disease among the general population and adults with diabetes in China: a modelling study.",
+    "output": "Despite the majority of patients with chronic kidney disease (CKD) live in low- and middle-income countries, most evidence on screening strategies is derived from high-income countries, where the contexts differ significantly. This study aims to assess the cost-effectiveness of population-based CKD screening strategies in both the general population and adults with diabetes in China."
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: Unbiased kidney-centric molecular categorization of chronic kidney disease as a step towards precision medicine.",
+    "output": "Current classification of chronic kidney disease (CKD) into stages using indirect systemic measures (estimated glomerular filtration rate (eGFR) and albuminuria) is agnostic to the heterogeneity of underlying molecular processes in the kidney thereby limiting precision medicine approaches. To generate a novel CKD categorization that directly reflects within kidney disease drivers we analyzed publicly available transcriptomic data from kidney biopsy tissue. A Self-Organizing Maps unsupervised artificial neural network machine-learning algorithm was used to stratify a total of 369 patients with CKD and 46 living kidney donors as healthy controls. Unbiased stratification of the discovery cohort resulted in identification of four novel molecular categories of disease termed CKD-Blue, CKD-Gold,"
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: Review of research progress in sepsis-associated acute kidney injury.",
+    "output": "Sepsis-associated acute kidney injury (SAAKI) poses a significant challenge in critical care medicine, characterized by high morbidity and mortality rates and often leading to chronic kidney disease (CKD). This article provides a comprehensive overview of the pathophysiological mechanisms, diagnostic advancements, therapeutic strategies, and prognostic studies of SAAKI. In terms of pathophysiological mechanisms, research has shifted from the traditional renal ischemia-centric view to a multidimensional interplay involving microcirculatory disturbances, immune metabolic disorders, and programmed cell death. Regarding diagnosis, traditional Kidney Disease: Improving Global Outcomes (KDIGO) criteria exhibit limitations, whereas novel biomarkers and imaging techniques offer new avenues for ear"
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: Unveiling pathology-related predictive uncertainty of glomerular lesion recognition using prototype learning.",
+    "output": "Recognizing glomerular lesions is essential in diagnosing chronic kidney disease. However, deep learning faces challenges due to the lesion heterogeneity, superposition, progression, and tissue incompleteness, leading to uncertainty in model predictions. Therefore, it is crucial to analyze pathology-related predictive uncertainty in glomerular lesion recognition and unveil its relationship with pathological properties and its impact on model performance."
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: Improving prototypical parts abstraction for case-based reasoning explanations designed for the kidney stone type recognition.",
+    "output": "The in-vivo identification of the kidney stone types during an ureteroscopy would be a major medical advance in urology, as it could reduce the time of the tedious renal calculi extraction process, while diminishing infection risks. Furthermore, such an automated procedure would make possible to prescribe anti-recurrence treatments immediately. Nowadays, only few experienced urologists are able to recognize the kidney stone types in the images of the videos displayed on a screen during the endoscopy. This visual recognition by urologists is also highly operator dependent. Thus, several deep learning (DL) models have recently been proposed to automatically recognize the kidney stone types using ureteroscopic images. However, these DL models are of black box nature and do not establish the r"
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: A phase-aware Cross-Scale U-MAMba with uncertainty-aware segmentation and Switch Atrous Bifovea EfficientNetB7 classification of kidney lesion subtype.",
+    "output": "Kidney lesion subtype identification is essential for precise diagnosis and personalized treatment planning. However, achieving reliable classification remains challenging due to factors such as inter-patient anatomical variability, incomplete multi-phase CT acquisitions, and ill-defined or overlapping lesion boundaries. In addition, genetic and ethnic morphological variations introduce inconsistent imaging patterns, reducing the generalizability of conventional deep learning models. To address these challenges, we introduce a unified framework called Phase-aware Cross-Scale U-MAMba and Switch Atrous Bifovea EfficientNet B7 (PCU-SABENet), which integrates multi-phase reconstruction, fine-grained lesion segmentation, and robust subtype classification. The PhaseGAN-3D synthesizes missing CT "
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: [Predicting Intensive Care Unit Mortality in Patients With Heart Failure Combined With Acute Kidney Injury Using an Interpretable Machine Learning Model: A Retrospective Cohort Study].",
+    "output": "Heart failure (HF) complicated by acute kidney injury (AKI) significantly impacts patient outcomes, and it is crucial to make early predictions of short-term mortality. This study is focused on developing an interpretable machine learning model to enhance early prediction accuracy in such clinical scenarios."
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: Deep learning algorithm for pathological grading of renal cell carcinoma based on multi-phase enhanced CT.",
+    "output": "Renal cell carcinoma (RCC) is a malignant renal tumor that poses a significant threat to patient health. Accurate preoperative pathological grading plays a crucial role in determining the appropriate treatment for this disease. Currently, deep learning technology has become an important method for pathological grading of RCC. However, existing methods primarily rely on single-phase computed tomography (CT) imaging for analysis and prediction, which has limitations such as missing small lesions, one-sided evaluation, and local focusing issues. Therefore, this study proposes a multi-modal deep learning algorithm that integrates multi-phase enhanced CT images with clinical variable data, aiming to provide a basis for predicting the pathological grading of RCC."
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: A Risk Prediction Model (CMC-AKIX) for Postoperative Acute Kidney Injury Using Machine Learning: Algorithm Development and Validation.",
+    "output": "Postoperative acute kidney injury (AKI) is a significant risk associated with surgeries under general anesthesia, often leading to increased mortality and morbidity. Existing predictive models for postoperative AKI are usually limited to specific surgical areas or require external validation."
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: Prediction of Moderate-to-Severe Sepsis-Associated Acute Kidney Injury Using a Dual-Timepoint Machine Learning Model: Development, Multiregional Validation, and Clinical Deployment Study.",
+    "output": "Sepsis-associated acute kidney injury (SA-AKI) is a frequent and life-threatening complication in patients in the intensive care unit (ICU), significantly increasing both mortality rates and the risk of chronic kidney dysfunction. However, existing prediction models have often focused on overall risk and lack severity-based stratification, which limits their clinical applicability."
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: Interpretable artificial intelligence model for accurate identification of medical conditions using immune repertoire.",
+    "output": "Underlying medical conditions, such as cancer, kidney disease and heart failure, are associated with a higher risk for severe COVID-19. Accurate classification of COVID-19 patients with underlying medical conditions is critical for personalized treatment decision and prognosis estimation. In this study, we propose an interpretable artificial intelligence model termed VDJMiner to mine the underlying medical conditions and predict the prognosis of COVID-19 patients according to their immune repertoires. In a cohort of more than 1400 COVID-19 patients, VDJMiner accurately identifies multiple underlying medical conditions, including cancers, chronic kidney disease, autoimmune disease, diabetes, congestive heart failure, coronary artery disease, asthma and chronic obstructive pulmonary disease,"
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: Variational quantum classifier-based early identification and classification of chronic kidney disease using sparse autoencoder and LASSO shrinkage.",
+    "output": "The two leading causes of chronic kidney disease (CKD) are excessive blood pressure and diabetes. Researchers worldwide utilize the rate of globular filtration and kidney inflammation biomarkers to identify chronic kidney disease that gradually reduces renal function. The mortality rate for CKD is high, and thus, a person with this illness is more likely to pass away at a younger age. Healthcare professionals must diagnose the various illnesses connected to this deadly disease as promptly as possible to lighten the impact of CKD. A quantum machine learning (QML) based technique is presented in this research to help with the early diagnosis and prognosis of CKD. The proposed research comprises four phases: data pre-processing, data augmentation, feature selection, and classification. In the"
+  },
+  {
+    "instruction": "Summarize the key findings and results of this study.",
+    "input": "Study: Development and Evaluation of Machine Learning Models to Predict the Risk of Major Cardiac Events and Death for People With Kidney Failure Having Non-Cardiac Surgery.",
+    "output": "People with kidney failure undergoing noncardiac surgery face an elevated risk of cardiovascular events and mortality. Existing risk prediction tools for perioperative events are either inaccurate in this population or include many variables that may complicate implementation. We developed and evaluated the performance of simplified machine-learning models for major cardiac events and mortality within 30 days after noncardiac surgery in patients with kidney failure in Alberta and Manitoba, Canada."
+  }
+]
